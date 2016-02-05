@@ -21,6 +21,7 @@ import java.net.URL;
 
 import it.jaschke.alexandria.MainActivity;
 import it.jaschke.alexandria.R;
+import it.jaschke.alexandria.Utility;
 import it.jaschke.alexandria.data.AlexandriaContract;
 
 
@@ -72,7 +73,7 @@ public class BookService extends IntentService {
      */
     private void fetchBook(String ean) {
 
-        if(ean.length()!=13){
+        if (ean.length() != 13) {
             return;
         }
 
@@ -84,13 +85,19 @@ public class BookService extends IntentService {
                 null  // sort order
         );
 
-        if(bookEntry.getCount()>0){
+        if (bookEntry.getCount() > 0) {
             bookEntry.close();
             return;
         }
 
         bookEntry.close();
 
+        if (Utility.isNetworkConnected(getApplicationContext())) {
+            fetchBookViaWeb(ean);
+        }
+    }
+
+    private void fetchBookViaWeb(String ean){
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
         String bookJsonString = null;
