@@ -4,6 +4,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:id="@+id/widgetLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:elevation="3dp"
+        android:background="#EEEEEE">
 
+        <ImageView
+            android:id="@+id/widgetImgLauncher"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_launcher"
+            android:contentDescription="@string/description.widget_icon"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/widget_padding"
+            android:gravity="center_vertical"
+            android:text="@string/widget_title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:contentDescription="@string/description.widget_title"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/widget_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
