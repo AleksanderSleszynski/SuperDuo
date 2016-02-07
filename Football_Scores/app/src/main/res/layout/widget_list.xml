@@ -1,41 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:padding="@dimen/widget_margin">
 
-    <LinearLayout
-        android:id="@+id/widgetLayoutMain"
+    <FrameLayout
+        android:id="@+id/widget_list_lay"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        android:elevation="3dp"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
         android:background="#EEEEEE">
 
         <ImageView
-            android:id="@+id/widgetImgLauncher"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_launcher"
-            android:contentDescription="@string/description.widget_icon"/>
-
-        <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:padding="@dimen/widget_padding"
-            android:gravity="center_vertical"
-            android:text="@string/widget_title"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textStyle="bold"
-            android:contentDescription="@string/description.widget_title"/>
-    </LinearLayout>
+            android:contentDescription="@string/app_name"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher"/>
+        </FrameLayout>
 
-    <ListView
-        android:id="@+id/widget_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
+            <ListView
+                android:id="@+id/widget_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                tools:listitem="@layout/widget_list_item"/>
+            <TextView
+                android:id="@+id/widget_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:text="@string/empty_score_list"/>
+        </FrameLayout>
 </LinearLayout>

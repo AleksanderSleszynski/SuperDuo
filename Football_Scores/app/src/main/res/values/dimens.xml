@@ -7,5 +7,22 @@
     <dimen name="TeamNames">17sp</dimen>
     <dimen name="Score">30sp</dimen>
     <dimen name="League">15sp</dimen>
-    <dimen name="widget_padding">5dp</dimen>
+    <dimen name="divider_height">15dp</dimen>
+
+
+    <dimen name="widget_today_default_height">80dp</dimen>
+    <dimen name="widget_today_default_width">80dp</dimen>
+    <dimen name="widget_margin">4dp</dimen>
+    <dimen name="widget_small_text">10sp</dimen>
+
+    <dimen name="widget_today_min_resize_width">80dp</dimen>
+    <dimen name="widget_today_min_resize_height">@dimen/widget_today_default_height</dimen>
+    <dimen name="widget_today_large_width">220dp</dimen>
+
+    <dimen name="widget_detail_default_width">250dp</dimen>
+    <dimen name="widget_detail_default_height">180dp</dimen>
+    <dimen name="widget_detail_min_resize_width">220dp</dimen>
+    <dimen name="widget_detail_min_resize_height">@dimen/widget_detail_default_height</dimen>
+
+
 </resources>
