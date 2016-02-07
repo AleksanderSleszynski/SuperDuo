@@ -39,7 +39,7 @@
 
 
     <!-- Enter Your API key here-->
-    <string name="api_key" translateable="false">04a5e5d80b484acb80bba25d014a4173</string>
+    <string name="api_key" translateable="false"></string>
 
     <string name="empty_score_list">Sorry no scores or fixtures for this day. Try another</string>
 
