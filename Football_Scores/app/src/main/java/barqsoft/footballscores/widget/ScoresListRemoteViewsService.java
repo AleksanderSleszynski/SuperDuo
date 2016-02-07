@@ -15,7 +15,7 @@ import barqsoft.footballscores.R;
 import barqsoft.footballscores.Utilies;
 
 
-public class FootballRemoteViewsService extends RemoteViewsService {
+public class ScoresListRemoteViewsService extends RemoteViewsService {
 
     @Override
     public FootballRemoteViewsFactory onGetViewFactory(Intent intent) {
