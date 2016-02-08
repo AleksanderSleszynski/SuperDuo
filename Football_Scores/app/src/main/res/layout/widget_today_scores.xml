@@ -35,8 +35,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:paddingEnd="@dimen/activity_horizontal_margin"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingStart="@dimen/activity_horizontal_margin"
                 android:text="@string/test_text"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/widget_small_text" />
@@ -57,9 +56,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
                 android:text="@string/test_text"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/widget_small_text" />
