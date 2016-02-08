@@ -1,17 +1,16 @@
 package it.jaschke.alexandria;
 
-import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.Log;
+import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -252,6 +251,13 @@ public class NavigationDrawerFragment extends Fragment {
             return true;
         }
 
+        switch (item.getItemId()) {
+            case android.R.id.home:
+            getActivity().getSupportFragmentManager().popBackStack();
+            setBackButtonToDrawerToggle();
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -278,5 +284,17 @@ public class NavigationDrawerFragment extends Fragment {
          * Called when an item in the navigation drawer is selected.
          */
         void onNavigationDrawerItemSelected(int position);
+    }
+
+    public void setDrawerToggleToBackButton(){
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setHomeButtonEnabled(true);
+        mDrawerToggle.setDrawerIndicatorEnabled(false);
+    }
+
+    public void setBackButtonToDrawerToggle(){
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setHomeButtonEnabled(false);
+        mDrawerToggle.setDrawerIndicatorEnabled(true);
     }
 }

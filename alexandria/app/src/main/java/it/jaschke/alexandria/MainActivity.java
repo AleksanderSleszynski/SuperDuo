@@ -149,6 +149,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
                 .addToBackStack("Book Detail")
                 .commit();
 
+        navigationDrawerFragment.setDrawerToggleToBackButton();
     }
 
     private class MessageReciever extends BroadcastReceiver {
@@ -175,6 +176,8 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
         if(getSupportFragmentManager().getBackStackEntryCount()<2){
             finish();
         }
+        navigationDrawerFragment.setBackButtonToDrawerToggle();
+
         super.onBackPressed();
     }
 
