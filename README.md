@@ -6,7 +6,7 @@ To do this, I find and handle error cases, add accessibility features, allow for
 I received grade “Exceeds Specifications” by certified Udacity code reviewer 
 
 ## Libraries
-*[Barcodescanner](https://github.com/dm77/barcodescanner)
+* [Barcodescanner](https://github.com/dm77/barcodescanner)
 
 ## License
    Copyright 2016 Aleksander Śleszyński
